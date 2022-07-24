@@ -9,3 +9,8 @@ class LoginPageLocators():
     login_url = "http://selenium1py.pythonanywhere.com/"
     login_form = (By.CSS_SELECTOR, "#login_form")
     register_form = (By.CSS_SELECTOR, "#register_form")
+
+class ProductPageLocators():
+    BASKET_BUTTON = (By.CLASS_NAME, "btn.btn-lg")
+    name_book_form = (By.CSS_SELECTOR, "The.shellcoder's.handbook")
+
