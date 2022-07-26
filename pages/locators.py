@@ -12,5 +12,7 @@ class LoginPageLocators():
 
 class ProductPageLocators():
     BASKET_BUTTON = (By.CLASS_NAME, "btn.btn-lg")
-    name_book_form = (By.CSS_SELECTOR, "The.shellcoder's.handbook")
-
+    PRICE_BOOK = (By.CSS_SELECTOR, "#messages .alert:nth-child(3) .alertinner > p > strong")
+    NAME_BOOK = (By.CSS_SELECTOR, "#messages .alert:nth-child(1) .alertinner > strong")
+    book = (By.CSS_SELECTOR, ".product_main > h1")
+    price = (By.CSS_SELECTOR, ".product_main .price_color")

@@ -7,5 +7,13 @@ class ProductPage(BasePage):
     def add_product_to_basket(self):
         link = self.browser.find_element(*ProductPageLocators.BASKET_BUTTON)
         link.click()
-    def guest_should_see_name_book(self):
-        assert self.is_element_present(*ProductPageLocators.name_book_form), "Name book incorrect"
+    def assert_price_book(self):
+        price_book_alert = self.browser.find_element(*ProductPageLocators.PRICE_BOOK).text
+        book_price = self.browser.find_element(*ProductPageLocators.price).text
+        assert price_book_alert == book_price, "price book incorrect"
+        
+    def assert_name_book(self):
+        name_book_alert = self.browser.find_element(*ProductPageLocators.NAME_BOOK).text
+        book_name = self.browser.find_element(*ProductPageLocators.book).text
+        assert name_book_alert == book_name, "name book incorrect"    
+     
